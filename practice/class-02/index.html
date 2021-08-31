@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 40%;
+            left: 50%;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div data-js="container"></div>
+
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <!-- React DOM -->
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel Compiler for JSX -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <script type="text/babel"> 
+        const container = document.querySelector('[data-js="container"')
+
+        const main = (
+            <main>
+                <h1 style={{fontFamily: 'sans-serif'}}>Hello World!</h1>
+                <p style={{fontFamily: 'sans-serif'}}>React Bootcamp from Brainn Co.</p>
+            </main>
+        )
+        
+        ReactDOM.render(main, container)
+    </script>
+</body>
+</html>
