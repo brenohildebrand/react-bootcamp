@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transform: translate(-50%, -50%);
+            position: absolute;
+            top: 40%;
+            left: 50%;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div data-js="container"></div>
+
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script>
+        const container = document.querySelector('[data-js="container"')
+
+        const h1 = React.createElement('h1', { style: { fontFamily: 'sans-serif' } }, 'Hello World!')
+        const p = React.createElement('p', { style: {  fontFamily: 'sans-serif' }, children: 'React Bootcamp from Brainn Co.'})
+        const main = React.createElement('main', null, h1, p)
+
+        ReactDOM.render(main, container)
+    </script>
+</body>
+</html>
