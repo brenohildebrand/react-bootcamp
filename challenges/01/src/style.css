@@ -2,17 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    /* For the sake of the exercise */
-    border: 1px solid black;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.6rem;
+}
 
-    /* For the sake of the exercise */
-    border: none;
+/* For the sake of the exercise */
+header, menu, main, footer, aside, section {
+    border: 1px solid black;
 }
 
 header {
@@ -37,19 +35,36 @@ main {
 }
 
 aside {
+    flex-grow: 1;
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
-    flex-grow: 1;
+aside > h2 {
+    margin-bottom: 50px;
+}
+
+aside > button {
+    margin: 30px;
 }
 
 section {
+    flex-grow: 3;
+
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     
-    flex-grow: 3;
+    max-width: 75vw;
+    padding: 50px 250px;
+}
+
+section > p {
+    margin-top: 30px;
 }
 
 footer {
@@ -59,3 +74,29 @@ footer {
     padding: 80px;
 }
 
+button {
+    padding: 15px 35px;
+    min-width: 130px;
+
+    transform: scale(1.2);
+
+    outline: none;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.3);
+}
+
+.primary {
+    background-color: whitesmoke;
+    color: black;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.secondary {
+    background-color: black;
+    color: whitesmoke;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.2);
+}
