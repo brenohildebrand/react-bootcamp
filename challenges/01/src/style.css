@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* For the sake of the exercise */
+    border: 1px solid black;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+
+    /* For the sake of the exercise */
+    border: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+
+    padding: 80px;
+}
+
+menu {
+    display: flex;
+    justify-content: center;
+
+    padding: 80px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+
+    height: 60vh;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-grow: 3;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+
+    padding: 80px;
+}
+
