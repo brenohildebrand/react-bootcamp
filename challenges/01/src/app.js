@@ -1,15 +1,16 @@
 import React, { Fragment } from 'react'
+import Header from './components/header'
+import Menu from './components/menu'
+import Main from './components/main'
+import Footer from './components/footer'
 
 const App = () => {
     return (
         <Fragment>
-            <header>Header</header>
-            <menu>Menu</menu>
-            <main>
-                <aside>Sidebar</aside>
-                <section>Content</section>
-            </main>
-            <footer>Footer</footer>
+            <Header/>
+            <Menu/>
+            <Main/>
+            <Footer/>
         </Fragment>
     )
 }
