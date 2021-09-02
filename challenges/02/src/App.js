@@ -11,12 +11,7 @@ const articles =
         title: 'How to learn C++',
         content: (
             <>
-                <p>Watch 
-                    <a href="https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw">
-                        The Cherno
-                    </a>
-                    .
-                </p> 
+                <p>Watch <a href="https://www.youtube.com/channel/UCQ-W1KE9EYfdxhL6S4twUNw">The Cherno</a>.</p> 
                 <p>Practice, practice, practice.</p>
                 <p>See real code on GitHub.</p>
             </>
