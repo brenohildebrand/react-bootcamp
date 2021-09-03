@@ -1,11 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import H2 from './H2'
-import P from './P'
 
-const Content = ({ articles }) => {
-    const [ title, setTitle ] = useState(articles[0].title)
-    const [ content, setContent ] = useState(articles[0].content)
-
+const Content = ({ currentArticle }) => {
+    const { title, content } = currentArticle
+    
     return (
         <section>
             <H2>{title}</H2>
