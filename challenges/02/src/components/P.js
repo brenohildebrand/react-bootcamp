@@ -1,7 +1,7 @@
-import React from 'react'
+import styled from "styled-components";
 
-const P = ({ children }) => {
-    return <p>{children}</p>
-}
+const P = styled.p`
+    /* Nothing special here too */
+`
 
 export default P

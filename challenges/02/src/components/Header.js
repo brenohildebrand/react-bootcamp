@@ -1,12 +1,12 @@
-import React from 'react'
-import H1 from './H1'
+import styled from 'styled-components'
 
-const Header = () => {
-    return (
-        <header>
-            <H1>Header</H1>
-        </header>
-    )
-}
+const Header = styled.header`
+    display: flex;
+    justify-content: center;
+
+    padding: 80px;
+
+    border: 1px solid black;
+`
 
 export default Header

@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react'
 import Header from './components/Header'
 import Menu from './components/Menu'
-import Main from './components/Main'
 import Footer from './components/Footer'
+import H1 from './components/H1'
+import GlobalStyle from './GlobalStyle'
+import Articles from './components/Articles'
 
 const articles =
 [
@@ -90,10 +92,17 @@ const articles =
 const App = () => {
     return (
         <Fragment>
-            <Header/>
-            <Menu/>
-            <Main articles={articles}/>
-            <Footer/>
+            <GlobalStyle/>
+            <Header>
+                <H1>Header</H1>
+            </Header>
+            <Menu>
+                <H1>Menu</H1>
+            </Menu>
+            <Articles articles={articles}/>
+            <Footer>
+                <H1>Footer</H1>
+            </Footer>
         </Fragment>
     )
 }

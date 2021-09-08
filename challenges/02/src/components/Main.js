@@ -1,21 +1,12 @@
-import React, { useState } from 'react'
-import Content from './Content'
-import Sidebar from './Sidebar'
+import styled from 'styled-components'
 
-const Main = ({ articles }) => {
+const Main = styled.main`
+    display: flex;
+    flex-direction: row;
 
-    const [currentArticle, setCurrentArticle] = useState(articles[0])
+    height: 60vh;
 
-    function articleOnClick(id) {
-        setCurrentArticle(articles.filter(article => article.id === id)[0])
-    }
-
-    return (
-        <main>
-            <Sidebar articles={articles} articleOnClick={articleOnClick}/>
-            <Content currentArticle={currentArticle}/>
-        </main>
-    )
-}
+    border: 1px solid black;
+`
 
 export default Main

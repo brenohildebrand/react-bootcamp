@@ -1,7 +1,7 @@
-import React from 'react'
+import styled from "styled-components";
 
-const H2 = ({ children }) => {
-    return <h2>{children}</h2>
-}
+const H2 = styled.h2`
+    /* Well.. Nothing special here */
+`
 
 export default H2
