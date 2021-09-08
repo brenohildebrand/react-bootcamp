@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { deleteCar, getCars, postCar } from "./API";
-import Form from "./Form";
+import CarForm from "./CarForm";
+import GlobalStyle from "./GlobalStyle";
 import Notify, { NotifyContext } from "./Notify";
-import Table from "./Table";
+import CarTable from "./CarTable";
 
 function App() {
   const { notify } = useContext(NotifyContext)
@@ -64,9 +65,10 @@ function App() {
 
   return (
     <>
+      <GlobalStyle/>
       <Notify/>
-      <Form handleSubmit={handleFormSubmit}/>
-      <Table cars={cars} handleDeleteOnClick={handleDeleteOnClick}/>
+      <CarForm handleSubmit={handleFormSubmit}/>
+      <CarTable cars={cars} handleDeleteOnClick={handleDeleteOnClick}/>
     </>
   );
 }

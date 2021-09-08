@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from "react"
+import styled, { css } from "styled-components";
 
 const NotifyContext = createContext({});
 
@@ -22,7 +23,7 @@ const NotifyProvider = ({ children }) => {
             setNotifications((prevState) => {
                 return prevState.filter(notification => notification['ID'] !== currentID)
             })
-        }, delay || 10000)
+        }, delay || 3000)
 
     }
 
@@ -41,17 +42,47 @@ const Notify = () => {
     const { notifications } = useContext(NotifyContext);
 
     return (
-        <div>
+        <NotifyDiv>
             {notifications.map(({ID, message, type}) => {
                 return (
-                    <div key={ID} className={`notification-${type}`}>
+                    <NotificationDiv 
+                        key={ID} 
+                        error={type === 'error'} 
+                        success={type === 'success'}
+                    >
                         {message}
-                    </div>
+                    </NotificationDiv>
                 )
             })}
-        </div>
+        </NotifyDiv>
     )
 }
+
+const NotifyDiv = styled.div`
+    display: block;
+
+    position: absolute;
+    top: 5%;
+    right: 2%;
+`
+
+const NotificationDiv = styled.div`
+    padding: 15px 15px;
+
+    background-color: whitesmoke;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+
+    margin-bottom: 15px;
+
+    ${props => props.success && css`
+        color: green;
+    `}
+
+    ${props => props.error && css`
+        color: red;
+    `}
+`
 
 export default Notify
 export { NotifyContext, NotifyProvider }
